@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="javascript.js"></script>
+</head>
+<body>
+    <div>
+        <div class = 'header'>
+            <h1>Library</h1>
+
+        </div>
+        <div class = 'main'>
+            <div class = 'container'>
+            <form onSubmit = "addBookToLibrary(library); return false">
+            <ul>
+                <li>
+                    <label > Title </label>
+                    <input id = 'Title'>
+                </li>
+                <li>
+                    <label> Author </label>
+                    <input id = 'Author'>
+                </li>
+                <li>
+                    <label> Pages </label>
+                    <input id = 'Pages'>
+                </li>
+            </ul>
+
+            <input type = "submit" value = "submit">
+
+            </form>
+
+
+        </div>
+        <div id = 'library' class = 'library'>
+
+
+        </div>
+    </div>
+
+    </div>
+</body>
+</html>
