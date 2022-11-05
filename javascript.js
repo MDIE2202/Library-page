@@ -1,27 +1,21 @@
 let library = []
 
-function book(title, author, pages){
-        this.title = title;
-        this.author = author;
-        this.pages = pages; 
+class book{
+    constructor(title, author, pages){
+        this.title = document.getElementById("Title").value;
+        this.author = document.getElementById("Author").value;
+        this.pages = document.getElementById("Pages").value;
     }
-
-function addBookToLibrary (library){
-    
-
-    var Title = document.getElementById("Title").value;
-    var Author = document.getElementById("Author").value;
-    var Pages = document.getElementById("Pages").value;
-
-    const new_entry = new book(Title,Author,Pages)
-
-    library.push(new_entry);
-
-    updatePage(library)
-    
 }
 
-function removeFunction(library, id){
+const addBookToLibrary = (library) => {
+        const new_entry = new book(Title,Author,Pages)
+        library.push(new_entry);
+        updatePage(library)   
+}
+
+
+const removeFunction = (library, id) => {
     
     for (let i = 0; i<library.length; i++){
         if(library[i].title == id)
@@ -32,7 +26,7 @@ function removeFunction(library, id){
 }
 
 
-function updatePage(library){
+const updatePage = (library) => {
     let box = document.getElementById('library').innerHTML = '' //strip previous listings
 
     library.forEach((book) => { 
@@ -67,7 +61,7 @@ function updatePage(library){
 })
 }
 
-function reader_function(book){
+const reader_function = (book) => {
     
     let read = document.getElementById('main_row_' + book)
     if (read.classList.contains('read')){
